@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
     before_action :authenticate_user!, only: [:new, :create, :edit, :update, :deatroy]
 
     def index
-        @articles = Article.all
+        @articles = Article.order(created_at: :desc)
     end
 
     def show
@@ -46,7 +46,7 @@ class ArticlesController < ApplicationController
 
     private
     def article_params
-        params.require(:article).permit(:title, :content)
+        params.require(:article).permit(:title, :content, :eyecatch)
     end
 
     def set_article
