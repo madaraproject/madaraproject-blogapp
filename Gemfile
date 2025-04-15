@@ -30,7 +30,7 @@ gem 'better_errors'
 gem 'binding_of_caller'
 gem 'devise'
 gem 'faker'
-gem 'ffi', '~> 1.15'
+gem 'ffi', '1.15.5'
 gem 'hamlit'
 gem 'aws-sdk-s3', require: false
 
